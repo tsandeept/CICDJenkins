@@ -1,0 +1,42 @@
+ubuntu@ip-172-31-18-86:~$ mvn --version
+The program 'mvn' is currently not installed. You can install it by typing:
+sudo apt install maven
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ sudo apt-get update
+Hit:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Ign:2 https://pkg.jenkins.io/debian-stable binary/ InRelease                                      
+Hit:3 http://ppa.launchpad.net/hermlnx/xrdp/ubuntu xenial InRelease                               
+Hit:4 https://pkg.jenkins.io/debian-stable binary/ Release                                        
+Hit:5 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu xenial InRelease                            
+Get:7 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]                        
+Get:8 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:9 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]     
+Fetched 325 kB in 1s (312 kB/s)    
+Reading package lists... Done
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ sudo apt install maven -y 
+Reading package lists... Done
+
+
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ ls -lrta /usr/share/maven/bin/mvn
+-rwxr-xr-x 1 root root 7383 Nov 19  2015 /usr/share/maven/bin/mvn
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ sudo vi /etc/environment
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ cat /etc/environment
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+# Java Home Path Setup
+JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+
+MAVEN_HOME="/usr/share/maven"
+M2_HOME=$MAVEN_HOME/bin
+
+ubuntu@ip-172-31-18-86:~$ source /etc/environment
+ubuntu@ip-172-31-18-86:~$ echo $MAVEN_HOME
+/usr/share/maven
+ubuntu@ip-172-31-18-86:~$ echo $M2_HOME
+/usr/share/maven/bin
+
+

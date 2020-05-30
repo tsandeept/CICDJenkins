@@ -1,0 +1,80 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-18-86:~$ uname -a
+Linux ip-172-31-18-86 4.4.0-1087-aws #98-Ubuntu SMP Wed Jun 26 05:50:53 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
+ubuntu@ip-172-31-18-86:~$ cat /etc/issue
+Ubuntu 16.04.6 LTS \n \l
+
+STEP-1 : 
+
+sudo add-apt-repository ppa:webupd8team/java
+
+STEP-2 : 
+
+sudo apt update; sudo apt install oracle-java8-installer -y 
+
+
+ubuntu@ip-172-31-18-86:~$ java -version
+java version "1.8.0_201"
+Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
+ubuntu@ip-172-31-18-86:~$ echo $JAVA_HOME
+
+ubuntu@ip-172-31-18-86:~$ echo $JRE_HOME
+
+ubuntu@ip-172-31-18-86:~$ ls -lrt /usr/lib/jvm/
+total 4
+drwxr-xr-x 7 root root 4096 Feb 15  2019 java-8-oracle
+ubuntu@ip-172-31-18-86:~$ ls -lrt /etc/environment 
+-rw-r--r-- 1 root root 96 Sep 12  2018 /etc/environment
+ubuntu@ip-172-31-18-86:~$ sudo cp -pvr /etc/environment /etc/environment_20200530'/etc/environment' -> '/etc/environment_20200530'
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ ls -lrt /etc/environment* 
+-rw-r--r-- 1 root root 96 Sep 12  2018 /etc/environment_20200530
+-rw-r--r-- 1 root root 96 Sep 12  2018 /etc/environment
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ ls -lrt /usr/lib/jvm/java-8-oracle/
+total 25996
+drwxr-xr-x 4 root root     4096 Feb 15  2019 man
+-r--r--r-- 1 root root       40 Feb 15  2019 LICENSE
+-rw-r--r-- 1 root root  5207434 Feb 15  2019 javafx-src.zip
+drwxr-xr-x 2 root root     4096 Feb 15  2019 bin
+-r--r--r-- 1 root root   155002 Feb 15  2019 THIRDPARTYLICENSEREADME.txt
+-rw-r--r-- 1 root root 21103945 Feb 15  2019 src.zip
+-rw-r--r-- 1 root root   108109 Feb 15  2019 THIRDPARTYLICENSEREADME-JAVAFX.txt
+-rw-r--r-- 1 root root      424 Feb 15  2019 release
+drwxr-xr-x 5 root root     4096 Feb 15  2019 lib
+drwxr-xr-x 3 root root     4096 Feb 15  2019 include
+-r--r--r-- 1 root root     3244 Feb 15  2019 COPYRIGHT
+-r--r--r-- 1 root root      159 Feb 15  2019 README.html
+drwxr-xr-x 5 root root     4096 Feb 15  2019 jre
+ubuntu@ip-172-31-18-86:~$ ls -lrt /usr/lib/jvm/java-8-oracle/jre/
+total 288
+-r--r--r--  1 root root 155002 Feb 15  2019 THIRDPARTYLICENSEREADME.txt
+drwxr-xr-x  3 root root   4096 Feb 15  2019 plugin
+-r--r--r--  1 root root     40 Feb 15  2019 LICENSE
+-r--r--r--  1 root root    955 Feb 15  2019 Welcome.html
+-rw-r--r--  1 root root 108109 Feb 15  2019 THIRDPARTYLICENSEREADME-JAVAFX.txt
+-r--r--r--  1 root root     46 Feb 15  2019 README
+-r--r--r--  1 root root   3244 Feb 15  2019 COPYRIGHT
+drwxr-xr-x 15 root root   4096 Feb 15  2019 lib
+drwxr-xr-x  2 root root   4096 Feb 15  2019 bin
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ # JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ sudo vi /etc/environment
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ source /etc/environment
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ java -version
+java version "1.8.0_201"
+Java(TM) SE Runtime Environment (build 1.8.0_201-b09)
+Java HotSpot(TM) 64-Bit Server VM (build 25.201-b09, mixed mode)
+ubuntu@ip-172-31-18-86:~$ 
+ubuntu@ip-172-31-18-86:~$ echo $JAVA_HOME
+/usr/lib/jvm/java-8-oracle/
+ubuntu@ip-172-31-18-86:~$ 
+
+
+sudo apt-get install java-8-oracle -y 
