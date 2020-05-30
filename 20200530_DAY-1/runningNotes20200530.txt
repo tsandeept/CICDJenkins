@@ -1,0 +1,38 @@
+Agenda :
+
+1. How I will be sharing the running notes?
+2. CI/CD Pipeline 
+3. Create a Sample Java Project
+4. Git Commands 
+5. Download, Install & Configre Jenkins 
+
+
+
+1. How I will be sharing the running notes?
+
+STEP-1 : Go to git-scm.com and download
+
+STEP-2 : Install & Configure 
+
+STEP-3 : Open Gitbash on your Operating System 
+    - Windows :
+        - Gitbash 
+    - Mac/Linux/Unix : 
+        - Terminal
+        
+STEP-4 : Go to VCS / SCM GUI Vendors :
+    - Github 
+    - Gitlab 
+    - Bitbucket
+    - AWS CodeCommit
+    - Azure Repos
+
+STEP-5 : Download, Install & Configure IDEL / TEXT Editors :
+
+https://code.visualstudio.com/download
+
+STEP-6 : Go to Local Machine i.e. Laptop or Desktop 
+
+git clone https://gitlab.com/cloudbinary/cicd-with-jenkins_slearn.git
+
+STEP-7 : Open Online Repo with visualstudio Editor:
